@@ -41,7 +41,8 @@ const cargarTabla = ()=>{
         let celdaDescripcion = document.createElement("td");
         celdaDescripcion.innerHTML = c.descripcion;
         let celdaOferta = document.createElement("td");
-
+        celdaOferta.innerText = c.oferta
+        /* No logre que mostrara el icono
         let icono = document.createElement("i");
         if(c.oferta){
             icono.classList.add("fas","fa-check-square");
@@ -49,7 +50,8 @@ const cargarTabla = ()=>{
             icono.classList.add("fas","fa-times-circle");
         };
         celdaOferta.appendChild(icono);
-
+        */
+        
         fila.appendChild(celdaNombre);
         fila.appendChild(celdaHorario);
         fila.appendChild(celdaValor);
@@ -100,5 +102,6 @@ const cargarTabla = ()=>{
     temp.oferta = oferta;
     carta.push(temp);
     cargarTabla();
+    swal.fire("Registro de menu realizado");
     
   });
